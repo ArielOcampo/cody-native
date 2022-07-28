@@ -40,7 +40,7 @@ export default function Tabs() {
                     headerShown: false,
                     tabBarActiveTintColor:'black',
                     tabBarInactiveTintColor: '#4a0000',
-                    tabBarBadge: cartItems ? cartItems : undefined,
+                    tabBarBadge: cartItems > 0 ? cartItems : undefined,
                     tabBarIcon: ({ color, size }) => <Entypo name="shopping-cart" size={24} color="#4a0000" />
                 }}
             />
