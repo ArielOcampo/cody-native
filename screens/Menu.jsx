@@ -120,7 +120,7 @@ const Menu = ({ route }) => {
                                             await dispatch(productActions.addToCart(item._id));
                                         }} >
                                             <View style={{ width: '100%', alignItems: 'center' }}>
-                                                <Text style={{ fontSize: 15, paddingHorizontal: 20, paddingVertical: 8, borderRadius: 10, backgroundColor: "#318aac", borderColor: '#fff', borderWidth: 1, marginVertical: 10, color: '#fff', fontWeight: '600' }} >Pedir</Text>
+                                                <Text style={{ fontSize: 15, paddingHorizontal: 20, paddingVertical: 8, borderRadius: 10, backgroundColor: "#318aac", borderColor: '#fff', borderWidth: 1, marginVertical: 10, color: '#fff', fontWeight: '600' }} >AGREGAR</Text>
                                             </View>
                                         </TouchableOpacity>
                                     }

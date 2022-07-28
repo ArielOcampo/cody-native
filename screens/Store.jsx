@@ -31,9 +31,12 @@ const Store = () => {
         menu: {
             height: 300,
             width: 250,
-
-            marginTop: 20
-
+            marginTop: 20,
+            // borderWidth: 2,
+            shadowOffset: { width: -2, height: 4 },
+            shadowColor: '#171717',
+            shadowOpacity: 0.2,
+            shadowRadius: 3,
         },
         menuText: {
             justifyContent: 'flex-start',

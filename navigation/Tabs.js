@@ -3,14 +3,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import StoreStack from './StoreStack';
 import ShoppingStack from './ShoppingStack';
 import AuthStack from './AuthStack';
+import { useSelector } from 'react-redux'
 
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import productReducer from './../redux/reducers/productReducer';
 
 const Tab = createBottomTabNavigator();
 
 export default function Tabs() {
+
+    const cartItems= useSelector(store => store.productReducer.cart).length;
+
     return (
         <Tab.Navigator
             initialRouteName='Store Stack'
@@ -35,6 +40,7 @@ export default function Tabs() {
                     headerShown: false,
                     tabBarActiveTintColor:'black',
                     tabBarInactiveTintColor: '#4a0000',
+                    tabBarBadge: cartItems ? cartItems : undefined,
                     tabBarIcon: ({ color, size }) => <Entypo name="shopping-cart" size={24} color="#4a0000" />
                 }}
             />

@@ -13,7 +13,6 @@ const Hero = () => {
   let [fontsLoaded] = useFonts({
     'Thunder-Love': require('../assets/fonts/ALoveofThunder.ttf'),
     'Mochy': require('../assets/fonts/MochiyPopOne-Regular.ttf'),
-
   });
 
   const heroStyles = StyleSheet.create({
@@ -43,7 +42,7 @@ const Hero = () => {
       }
     },
     heroContainer: {
-      height: height / 4 * 3,
+      height: height / 4 * 2.5,
       // padding: 30
     },
     textContainer: {
@@ -51,7 +50,7 @@ const Hero = () => {
       justifyContent: 'center',
       alignItems: 'center',
       padding: 60,
-      marginTop: 50
+      marginTop: 40
     },
     btn: {
       borderRadius: 15,
@@ -74,8 +73,11 @@ const Hero = () => {
       <View style={{backgroundColor:'rgba(255,255,255,0.4)', width:'100%', height:'100%',padding: 30,justifyContent: 'space-evenly',
       alignItems: 'center'}}>
         <View style={heroStyles.textContainer} >
-          <Text variant='h1' style={{ marginVertical: 10, fontSize: 50, fontFamily: 'Thunder-Love', color: '#581C0C' }} ><Text style={{color:'#f89a2d'}}>CO</Text><Text style={{color:'#554d39'}}>DY</Text></Text>
-          <Text variant='h3' style={{ marginLeft: 100, fontSize: 25, fontFamily: 'Thunder-Love', color: '#f0d272', width: '100%' }} ><Text style={{color:'#554d39'}}>Coffe</Text> & <Text style={{color:'#f89a2d'}}>Code</Text></Text>
+          <Text variant='h1' style={{ fontSize: 45, fontFamily: 'Thunder-Love', color: '#581C0C' }} >
+            <Text style={{color:'#f89a2d'}}>CO</Text>
+            <Text style={{color:'#554d39'}}>DY</Text>
+            </Text>
+          <Text variant='h3' style={{ marginLeft: 150, fontSize: 20, fontFamily: 'Thunder-Love', color: '#f0d272', width: '100%' }} ><Text style={{color:'#554d39'}}>Coffe</Text> & <Text style={{color:'#f89a2d'}}>Code</Text></Text>
         </View>
         <View style={{ height: "50%", flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100%', paddingVertical: 40, paddingHorizontal: 20 }}>
           <TouchableOpacity style={heroStyles.btn} underlayColor="#000" activeOpacity={0.6} onPress={() => navigation.navigate("Main")}>
